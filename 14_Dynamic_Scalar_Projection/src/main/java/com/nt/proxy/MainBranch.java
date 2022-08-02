@@ -1,4 +1,4 @@
-package com.nt.reposetory;
+package com.nt.proxy;
 
 public interface MainBranch {
 

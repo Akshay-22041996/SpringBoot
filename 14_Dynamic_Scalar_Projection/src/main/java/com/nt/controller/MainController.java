@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import com.nt.reposetory.SecondImpl;
+import com.nt.proxy.SecondImpl;
 import com.nt.service.EmployeeManagementImpl;
 
 @Controller("employeecontroller")

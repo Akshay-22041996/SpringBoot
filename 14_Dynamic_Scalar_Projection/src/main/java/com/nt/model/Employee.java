@@ -8,6 +8,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import lombok.Data;
 
 @Entity
@@ -22,6 +25,8 @@ public class Employee {
 	@Column(length = 20)
 	private String eaddress;
 	private Double sal;
+	@CreationTimestamp
 	private Timestamp entryTime;
+	@UpdateTimestamp
 	private Timestamp updateTime;
 }

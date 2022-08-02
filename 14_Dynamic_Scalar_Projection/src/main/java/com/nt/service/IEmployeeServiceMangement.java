@@ -2,8 +2,8 @@ package com.nt.service;
 
 import java.util.List;
 
-import com.nt.reposetory.FirstImpl;
-import com.nt.reposetory.SecondImpl;
+import com.nt.proxy.FirstImpl;
+import com.nt.proxy.SecondImpl;
 
 public interface IEmployeeServiceMangement {
 

@@ -7,22 +7,21 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import com.nt.controller.MainController;
-import com.nt.reposetory.FirstImpl;
-import com.nt.reposetory.SecondImpl;
+import com.nt.proxy.FirstImpl;
+import com.nt.reposetory.IEmployeeRepo;
 
 @Component
 public class EmployeeRunnerTest implements CommandLineRunner{
 
 	@Autowired
 	private MainController controller;
+	
+	@Autowired
+	private IEmployeeRepo repo;
 
 	@Override
 	public void run(String... args) throws Exception {
-		List<SecondImpl> list1=controller.getAllEmployeeByLetters("Jay", SecondImpl.class);
-		list1.forEach(emp->{
-			System.out.println(emp.ename());
-		});
+	
 		
 	}
-	
 }
