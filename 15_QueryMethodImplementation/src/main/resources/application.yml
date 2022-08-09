@@ -1,0 +1,12 @@
+spring:
+   datasource:
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+      username: akshay
+      password: akshay
+      url: jdbc:oracle:thin:@localhost:1521:orcl
+      
+   jpa: 
+      show-sql: true
+      hibername: 
+         ddl-auto: udpate
+      
