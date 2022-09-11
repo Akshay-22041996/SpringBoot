@@ -1,6 +1,6 @@
+
 package com.nt.service;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -44,6 +44,13 @@ public class PersonPhoneServiceImpl implements IPersonPhoneServiceManagement {
 	public Iterable<PhoneNumbers> getAllPhoneNumbers() {
 		Iterable<PhoneNumbers> itr=phoRepo.findAll();
 		return itr;
+	}
+
+	@Override
+	public PersonDetails getPersonDetailsByUsingPhone(Long phNo) {
+		PersonDetails details=phoRepo.getDetails(phNo);
+		
+		return details;
 	}
 
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import com.nt.entity.PersonDetails;
 import com.nt.entity.PhoneNumbers;
 import com.nt.service.IPersonPhoneServiceManagement;
 
@@ -56,13 +57,18 @@ public class PersonPhoneRunner implements CommandLineRunner {
 //		System.out.println(detail.getPname()+"  "+detail.getPid()+"  "+detail.getPlocation());
 //		detail.getPhone().forEach(System.out::println);
 		
-		Iterable<PhoneNumbers> list=service.getAllPhoneNumbers();
+	/*	Iterable<PhoneNumbers> list=service.getAllPhoneNumbers();
 		list.forEach(ph->{
 			System.out.println("List of phone numbers::"+ph);
 			System.out.println("Parent details");
 			System.out.println(ph.getPer());
 		});
-
+	*/
+		
+		PersonDetails det=service.getPersonDetailsByUsingPhone(4748452L);
+		if(det !=null) {
+			System.out.println(det.getPlocation()+" ****"+det.getPname());
+		}
 	}
 
 }

@@ -10,5 +10,6 @@ public interface IPersonPhoneServiceManagement {
 	public String registerThroughPerson(PersonDetails per);
 	public String registerThroughPhone(Set<PhoneNumbers> ph);
 	public PersonDetails getPersonDetailsById(int id);
-	public Iterable<PhoneNumbers> getAllPhoneNumbers();
+	public Iterable<PhoneNumbers> getAllPhoneNumbers(); 
+	public PersonDetails getPersonDetailsByUsingPhone(Long phNo);
 }
